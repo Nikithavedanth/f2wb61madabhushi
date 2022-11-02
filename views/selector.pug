@@ -1,0 +1,13 @@
+
+extends layout
+
+block content
+h1= title
+p Welcome to #{title} js
+br 
+-var imageName= ["NewYork.jpg","Sydney.jpg","Newjersey.jpg","Paris.jpg","Melbourne.jpg"] 
+-for(let i=0;i<3;i++){
+-let s=Math.floor(Math.random()*5)
+ img(src= `/images/${imageName[s]}` alt="images", height="300", width="300")
+ -}
+
