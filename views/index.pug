@@ -7,10 +7,11 @@ block content
   button(type='button' class="btn btn-secondary" onclick="doBump()") Press Me
   div(id='bump') Bump the count
   script.
-    let count=0
-    let bump=1
+    var count=0
+    var bump=1
     function doBump(){
-    bump=bump+count
-    document.getElementById('bump').innerHTML=bump
+    count+=bump
     bump+=1
+    document.getElementById('bump').innerHTML=`count ${count} with bump ${bump}`
     }
+  a(href='Atlas') Atlas
