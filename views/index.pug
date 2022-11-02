@@ -3,4 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  img(src='logo')
+  p This is my Assignment please use it as reference.
+  button(type='button' class="btn btn-secondary" onclick="doBump()") Press Me
+  div(id='bump') Bump the count
+  script.
+    let count=0
+    let bump=1
+    function doBump(){
+    bump=bump+count
+    document.getElementById('bump').innerHTML=bump
+    bump+=1
+    }
